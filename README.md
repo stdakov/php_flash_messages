@@ -1,7 +1,7 @@
-#PHP FLASH messages
+# PHP FLASH messages
 This is supper simple implementation of php flash messages
 
-##Installation
+## Installation
 The preferred way to install this tool is through [composer](http://getcomposer.org/download/).
 
 Either run
@@ -17,7 +17,7 @@ or add
 ```
 
 
-##Usage
+## Usage
 
 set message:
 ```php
