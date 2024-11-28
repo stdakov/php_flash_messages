@@ -1,0 +1,24 @@
+{
+    "name": "stdakov/flash",
+    "description": "Simple php flash message library",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["session", "flash", "messages"],
+    "authors": [
+        {
+            "name": "Stanislav Dakov",
+            "email": "st.dakov@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "st.dakov@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dakov\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}

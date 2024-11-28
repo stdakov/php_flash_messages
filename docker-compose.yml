@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  php:
+    build:
+      args:
+        user: stas
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: appimage
+    container_name: flash-message-php
+    restart: "no"
+    working_dir: /var/www/
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    expose:
+      - 9003
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/php/php.ini:/usr/local/etc/php/conf.d/custom-php.ini
+      - ./docker-compose/php/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./docker-compose/php/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+    networks:
+      - spending-net
+networks:
+  spending-net:
+    driver: bridge
